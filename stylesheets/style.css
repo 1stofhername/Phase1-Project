@@ -2,6 +2,8 @@ body {
     margin: 0;
     font-family: monospace;
   }
+
+
   
   #event-header {
     display: flex;
@@ -41,11 +43,11 @@ body {
   
   button {
     position: relative;
-    background-color: #e04b52;
+    background-color: #000000;
     border: none;
     border-radius: 5px;
     height: 3rem;
-    width: max-content;
+    width: 15rem;
     color: whitesmoke;
     font-size: 18px;
     justify-self: center;
@@ -53,8 +55,8 @@ body {
   
   button:hover {
     background-color: whitesmoke;
-    border: #e04b52 solid 1px;
-    color: #e04b52;
+    border: #000000 solid 1px;
+    color: #000000;
   }
   
   .container {
@@ -62,7 +64,7 @@ body {
     width: stretch;
     height: auto;
     display: none;
-    background: #515DA2;
+    background:rgb(147, 210, 212);
     opacity: .8;
   }
   
