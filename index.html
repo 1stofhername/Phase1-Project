@@ -17,9 +17,19 @@
     </div>
     <div class = 'container'>
         <form class='add-event-form'>
-            <h2>Activate your community!</h2>
-
-            Event title:
+            <h2 id='form-title'>Activate your community!</h2>
+            <br>
+            <p id='event-type-text' class = 'input-label'>Choose an event type:</p>
+              <br>
+              <input type="radio" id='improvement-type' name='event_type' value='Community Improvement'>
+              <label for='improvement-type'>Community improvement</label>
+              <input type="radio" id='education-type' name='event_type' value='Community Education'>
+              <label for='education-type'>Community education</label>
+              <input type="radio" id='support-type' name='event_type' value='Community Support'>
+              <label for='support-type'>Community support</label>
+              <br>
+              <br>
+            <p class= 'input-label'>Event title:</p>
             <input
               type="text"
               name="event-title"
@@ -29,7 +39,7 @@
             />
 
             <br>
-            Facilitator:
+            <p class= 'input-label'>Facilitator:</p>
             <input
               type="text"
               name="Facilitator"
@@ -37,9 +47,11 @@
               placeholder="First/Last name"
               class="input-text"
               />
-
             <br>
-            Event Date:
+              
+              <br>
+
+            <p class= 'input-label'>Event Date:</p>
             <input
               type="text"
               name="Event-date"
@@ -48,16 +60,8 @@
               class="input-text"
               />
               <br>
-              <p>Choose an event type:</p>
               <br>
-              <input type="radio" id='improvement-type' name='event_type' value='Community Improvement'>
-              <label for='improvement-type'>Community improvement</label>
-              <input type="radio" id='education-type' name='event_type' value='Community Education'>
-              <label for='education-type'>Community education</label>
-              <input type="radio" id='support-type' name='event_type' value='Community Support'>
-              <label for='support-type'>Community support</label>
-              <br><br>
-
+              <br>
               <label for="start-time">Start time:</label>
               
     <select id="start-time-dropdown" name="select-event-start-time">
@@ -100,7 +104,13 @@
       <option value="am">AM</option>
       <option value="pm">PM</option>
     </select>
-
+<br>
+<input
+          type="submit"
+          name="submit"
+          value="Activate"
+          class="submit"
+        />
         </form>
     </div>
     <p style="text-align:center">

@@ -74,7 +74,7 @@ body {
   
   .submit {
     position: relative;
-    background-color: #e04b52;
+    background-color: #000000;
     border-radius: 5px;
     height: 2rem;
     width: max-content;
@@ -82,13 +82,13 @@ body {
     font-size: 18px;
     justify-self: center;
     font-family: monospace;
-    margin: 3px;
+    margin: 20px;
   }
   
   .submit:hover {
     background-color: whitesmoke;
-    border: #e04b52 solid 1px;
-    color: #e04b52;
+    border: #000000 solid 1px;
+    color: #000000;
   }
   
   
