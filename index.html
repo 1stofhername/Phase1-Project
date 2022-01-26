@@ -4,9 +4,10 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Users/Alicia/Development/code/Projects/phase1-project/stylesheets/style.css"></script>
-            
     <title>Active Community</title>
 </head>
+
+
 <body>
     <div id ='event-header'>
         
@@ -15,20 +16,28 @@
         <br>
         <h1>Be a resource...</h1>
     </div>
-    <div class = 'container'>
-        <form class='add-event-form'>
-            <h2 id='form-title'>Activate your community!</h2>
+
+<!-- Improve Community Menu -->
+
+    <div class = 'container' id = 'event'>
+        <form class='add-event-form' id ='event-form'>
+            <h2 id='form-title'>Improve your community!</h2>
             <br>
+
+            <div id ='select-event-type'>
             <p id='event-type-text' class = 'input-label'>Choose an event type:</p>
               <br>
-              <input type="radio" id='improvement-type' name='event_type' value='Community Improvement'>
+              <input type="radio" id='improvement-type' name='improvement' value='Community Improvement'>
               <label for='improvement-type'>Community improvement</label>
-              <input type="radio" id='education-type' name='event_type' value='Community Education'>
+              <input type="radio" id='education-type' name='education' value='Community Education'>
               <label for='education-type'>Community education</label>
-              <input type="radio" id='support-type' name='event_type' value='Community Support'>
+              <input type="radio" id='support-type' name='support' value='Community Support'>
               <label for='support-type'>Community support</label>
+            </div>
+
               <br>
               <br>
+
             <p class= 'input-label'>Event title:</p>
             <input
               type="text"
@@ -42,23 +51,35 @@
             <p class= 'input-label'>Facilitator:</p>
             <input
               type="text"
-              name="Facilitator"
+              name="facilitator"
               value=""
               placeholder="First/Last name"
               class="input-text"
               />
-            <br>
-              
+
               <br>
+              <p class= 'input-label'>Description:</p>
+              <input
+                type="text"
+                name="description"
+                value=""
+                placeholder="Goal(s) for this event"
+                class="input-text"
+                id='description'
+                />
+            <br>
+            <br>
 
             <p class= 'input-label'>Event Date:</p>
             <input
               type="text"
-              name="Event-date"
+              name="event-date"
               value=""
               placeholder="YYYY-MM-DD"
               class="input-text"
+              id='event-date'
               />
+
               <br>
               <br>
               <br>
@@ -113,9 +134,64 @@
         />
         </form>
     </div>
+
+<!-- Support Community Menu -->
+
     <p style="text-align:center">
-    <button id ="join-community-btn">Join the community!</button>
+    <button id ="event-community-btn">Improve your community!</button>
     </p>
+
+    <p style="text-align:center">
+      <button id ="support-community-btn">Support your community!</button>
+      </p>
+
+
+    <div class = 'container' id = 'support'>
+      <form class='add-support-form' id ='support-form'>
+          <h2 id='form-title'>Support your community!</h2>
+            <br>
+            <br>
+
+          <p class= 'input-label'>Skill type:</p>
+          <input
+            type="text"
+            name="skill-type"
+            value=""
+            placeholder="e.g. Trained peacekeeper"
+            class="input-text"
+          />
+
+          <br>
+          <p class= 'input-label'>Supporter:</p>
+          <input
+            type="text"
+            name="supporter"
+            value=""
+            placeholder="First/Last name"
+            class="input-text"
+            />
+
+            <br>
+            <p class= 'input-label'>Goals:</p>
+            <input
+              type="text"
+              name="description"
+              value=""
+              placeholder="e.g. protect civillians, peace support."
+              class="input-text"
+              id='description'
+              />
+
+            <br>
+            <br>
+            <br>
+<input
+        type="submit"
+        name="submit-support"
+        value="Activate"
+        class="submit"
+      />
+      </form>
 
 
     <script src='src/index.js'></script>
