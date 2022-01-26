@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Users/Alicia/Development/code/Projects/phase1project/stylesheets/style.css"></script>
+    <link rel="stylesheet" href="/Users/Alicia/Development/code/Projects/phase1-project/stylesheets/style.css"></script>
             
     <title>Active Community</title>
 </head>
@@ -17,30 +17,46 @@
     </div>
     <div class = 'container'>
         <form class='add-event-form'>
-            <h3>Activate!</h3>
+            <h3>Activate your community!</h3>
 
+            Event title:
             <input
               type="text"
-              name="name"
+              name="event-title"
               value=""
-              placeholder="First name/Last name"
+              placeholder="Name your event"
               class="input-text"
             />
+
             <br>
+            Facilitator:
             <input
               type="text"
-              name="skill"
+              name="Facilitator"
               value=""
-              placeholder=""
+              placeholder="First/Last name"
               class="input-text"
               />
-              <!-- <label for="select-breed">Filter Breeds That Start with:</label>
-    <select id="breed-dropdown" name="select-breed">
-      <option value="a">a</option>
-      <option value="b">b</option>
-      <option value="c">c</option>
-      <option value="d">d</option>
-    </select> -->
+
+            <br>
+            Event Date:
+            <input
+              type="text"
+              name="Event-date"
+              value=""
+              placeholder="YYYY-MM-DD"
+              class="input-text"
+              />
+              <br>
+
+              <br><br>
+              <label for="select-breed">I want to facilitate a...:</label>
+              <br>
+    <select id="event-type-dropdown" name="select-event-type">
+      <option value="a">Community Improvement</option>
+      <option value="b">Community Workshop</option>
+      <option value="c">Community Support</option>
+    </select>
         </form>
     </div>
     <p style="text-align:center">
