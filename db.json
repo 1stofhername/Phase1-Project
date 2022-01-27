@@ -1,12 +1,5 @@
 {
-    "members": [
-        {
-            "id" : 1,
-            "name" : "Zollie Shore",
-            "role" : "educator",
-            "skills" : []
-    
-    
-        }
-    ]
-    }
+  "posts": [
+
+  ]
+}

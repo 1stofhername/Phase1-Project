@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     background-image: url("https://live.staticflickr.com/2528/4383075966_18c331ab3e_b.jpg");
-    opacity: .8;
+    /* opacity: .8; */
     height: 7rem;
     padding: 1rem;
     color: whitesmoke;
@@ -51,6 +51,7 @@ body {
     color: whitesmoke;
     font-size: 18px;
     justify-self: center;
+    margin: 20px
   }
   
   button:hover {
@@ -100,4 +101,4 @@ body {
     font-family: monospace;
     margin: 3px;
   }
-  
+

@@ -22,28 +22,15 @@
     <div class = 'container' id = 'event'>
         <form class='add-event-form' id ='event-form'>
             <h2 id='form-title'>Improve your community!</h2>
-            <br>
-
-            <div id ='select-event-type'>
-            <p id='event-type-text' class = 'input-label'>Choose an event type:</p>
-              <br>
-              <input type="radio" id='improvement-type' name='improvement' value='Community Improvement'>
-              <label for='improvement-type'>Community improvement</label>
-              <input type="radio" id='education-type' name='education' value='Community Education'>
-              <label for='education-type'>Community education</label>
-              <input type="radio" id='support-type' name='support' value='Community Support'>
-              <label for='support-type'>Community support</label>
-            </div>
-
               <br>
               <br>
 
-            <p class= 'input-label'>Event title:</p>
+            <p class= 'input-label'>Post title:</p>
             <input
               type="text"
               name="event-title"
               value=""
-              placeholder="Name your event"
+              placeholder="Columbia Food Drive"
               class="input-text"
             />
 
@@ -58,12 +45,12 @@
               />
 
               <br>
-              <p class= 'input-label'>Description:</p>
+              <p class= 'input-label'>Goal(s):</p>
               <input
                 type="text"
-                name="description"
+                name="goals"
                 value=""
-                placeholder="Goal(s) for this event"
+                placeholder="Collect 50 cans of food."
                 class="input-text"
                 id='description'
                 />
@@ -85,7 +72,7 @@
               <br>
               <label for="start-time">Start time:</label>
               
-    <select id="start-time-dropdown" name="select-event-start-time">
+    <select id="start-time-dropdown" name="start-time">
       <option value="12">12:00</option>
       <option value="1">1:00</option>
       <option value="2">2:00</option>
@@ -100,13 +87,13 @@
       <option value="11">11:00</option>
     </select>
 
-    <select id="start-time-dropdown" name="select-event-start-time">
+    <select id="start-time-dropdown" name="start-time-am-pm">
       <option value="am">AM</option>
       <option value="pm">PM</option>
     </select>
 
     <label for="end-time">End time:</label>
-    <select id="end-time-dropdown" name="select-event-end-time">
+    <select id="end-time-dropdown" name="end-time">
       <option value="12">12:00</option>
       <option value="1">1:00</option>
       <option value="2">2:00</option>
@@ -121,11 +108,13 @@
       <option value="11">11:00</option>
     </select>
 
-    <select id="start-time-dropdown" name="select-event-start-time">
+    <select id="start-time-dropdown" name="end-time-am-pm">
       <option value="am">AM</option>
       <option value="pm">PM</option>
     </select>
 <br>
+
+
 <input
           type="submit"
           name="submit"
@@ -135,63 +124,11 @@
         </form>
     </div>
 
-<!-- Support Community Menu -->
+<!-- Improve Community Button -->
 
     <p style="text-align:center">
-    <button id ="event-community-btn">Improve your community!</button>
+    <button id ="improve-community-btn">Improve your community!</button>
     </p>
-
-    <p style="text-align:center">
-      <button id ="support-community-btn">Support your community!</button>
-      </p>
-
-
-    <div class = 'container' id = 'support'>
-      <form class='add-support-form' id ='support-form'>
-          <h2 id='form-title'>Support your community!</h2>
-            <br>
-            <br>
-
-          <p class= 'input-label'>Skill type:</p>
-          <input
-            type="text"
-            name="skill-type"
-            value=""
-            placeholder="e.g. Trained peacekeeper"
-            class="input-text"
-          />
-
-          <br>
-          <p class= 'input-label'>Supporter:</p>
-          <input
-            type="text"
-            name="supporter"
-            value=""
-            placeholder="First/Last name"
-            class="input-text"
-            />
-
-            <br>
-            <p class= 'input-label'>Goals:</p>
-            <input
-              type="text"
-              name="description"
-              value=""
-              placeholder="e.g. protect civillians, peace support."
-              class="input-text"
-              id='description'
-              />
-
-            <br>
-            <br>
-            <br>
-<input
-        type="submit"
-        name="submit-support"
-        value="Activate"
-        class="submit"
-      />
-      </form>
 
 
     <script src='src/index.js'></script>

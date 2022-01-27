@@ -1,37 +1,62 @@
-let eventMember = false
+let eventCreate = false
 
 document.addEventListener('DOMContentLoaded', ()=> {
-    const improveBtn = document.querySelector('#event-community-btn');
+    const improveBtn = document.querySelector('#improve-community-btn');
     const eventFormContainer = document.querySelector('div.container#event');;
     improveBtn.addEventListener('click', () => {
-        eventMember = !eventMember;
-        if (eventMember) {
+        eventCreate = !eventCreate;
+        if (eventCreate) {
             eventFormContainer.style.display = 'block';
         } else {
             eventFormContainer.style.display = 'none';
         }
     });
-    const addBtn = document.querySelector('#support-community-btn');
-    const eventFormContainer = document.querySelector('div.container#support');;
-    addBtn.addEventListener('click', () => {
-        eventMember = !eventMember;
-        if (eventMember) {
-            eventFormContainer.style.display = 'block';
-        } else {
-            eventFormContainer.style.display = 'none';
-        }
-    })
-    ;
-    formHandler()   
+
+    submitHandler()   
 });
 
-const formHandler = ()=>{
+
+const submitHandler = ()=>{
     const form = document.getElementById('event-form');
     form.addEventListener('submit', (e)=>{
+        let title = e.target['event-title'].value;
+        let facilitator = e.target['facilitator'].value;
+        let goals = e.target['goals'].value;
+        let date = e.target['event-date'].value;
+        let startTime = e.target['start-time'].value;
+        let startTimeAmPm = e.target['start-time-am-pm'].value;
+        let endTime = e.target['end-time'].value;
+        let endTimeAmPm = e.target['end-time-am-pm'].value;
+
         e.preventDefault();
-        console.log(e.target['facilitator'].value, e.target['event-title'].value, e.target.value)
+
+        const formData = new postEvent (title, facilitator, goals, date, startTime, startTimeAmPm, endTime, endTimeAmPm);
+        formData.post()
     })
 }
 
+class postEvent {
+    constructor(title, facilitator, goals, date, startTime, startTimeAmPm, endTime, endTimeAmPm){
+        this.title = title;
+        this.facilitator = facilitator;
+        this.goals = goals;
+        this.date = date;
+        this.startTime = startTime+startTimeAmPm;
+        this.endTime = endTime+endTimeAmPm;
+        this.participants = 0        
+    }
+    post(){
+        fetch('http://localhost:3000/posts', {
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/JSON',
+                'Accept' : 'application/JSON'
+            },
+            body : JSON.stringify(this)
+        })
+        console.log(this)
+
+    }
+}
 
 
