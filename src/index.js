@@ -2,7 +2,8 @@ let eventCreate = false
 
 document.addEventListener('DOMContentLoaded', ()=> {
     const improveBtn = document.querySelector('#improve-community-btn');
-    const eventFormContainer = document.querySelector('div.container#event');;
+    const eventFormContainer = document.querySelector('div.container#event');
+
     improveBtn.addEventListener('click', () => {
         eventCreate = !eventCreate;
         if (eventCreate) {
@@ -11,8 +12,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
             eventFormContainer.style.display = 'none';
         }
     });
+    submitHandler();
+    fetchPost();
 
-    submitHandler()   
 });
 
 
@@ -29,6 +31,7 @@ const submitHandler = ()=>{
         let endTimeAmPm = e.target['end-time-am-pm'].value;
 
         e.preventDefault();
+        ;
 
         const formData = new postEvent (title, facilitator, goals, date, startTime, startTimeAmPm, endTime, endTimeAmPm);
         formData.post()
@@ -53,10 +56,22 @@ class postEvent {
                 'Accept' : 'application/JSON'
             },
             body : JSON.stringify(this)
-        })
-        console.log(this)
+        }).then(postRenderer(this));
 
     }
 }
 
+const fetchPost = function (){
+    fetch('http://localhost:3000/posts')
+            .then((res)=>res.json())
+            .then(postData=>postData.forEach(post => postRenderer(post)))
+        }
 
+
+const postRenderer = function (postObj) {
+    const postCollection = document.querySelector('#post-container');
+    const h2 = document.createElement('h2');
+
+    postCollection.appendChild(h2);
+    h2.innerHTML = postObj.title;
+}
