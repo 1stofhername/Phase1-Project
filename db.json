@@ -3,6 +3,7 @@
     {
       "title": "Rainier Avenue Trash Cleanup",
       "facilitator": "Zollie Shore",
+      "image": "https://images.pexels.com/photos/9324312/pexels-photo-9324312.jpeg",
       "goals": "Pickup litter on Rainier Avenue South between Orcas St and Graham St.",
       "date": "2022-02-02",
       "startTime": "2pm",
@@ -13,22 +14,13 @@
     {
       "title": "Urban Farming Workshop",
       "facilitator": "Nyema Ronin",
-      "goals": "Plant a container of hardy edible plants and herbs to take home.",
-      "date": "2022-03-05",
-      "startTime": "12am",
-      "endTime": "12am",
-      "participants": 0,
-      "id": 2
-    },
-    {
-      "title": "Central District Food Drive",
-      "facilitator": "Rea Parrish",
-      "goals": "Collect 100 cans of food to donate to the foodbank.",
+      "image": "https://images.pexels.com/photos/5028324/pexels-photo-5028324.jpeg",
+      "goals": "Plant a container full of hardy, edible plants and herbs to take home.",
       "date": "2022-06-15",
-      "startTime": "10am",
+      "startTime": "2pm",
       "endTime": "3pm",
       "participants": 0,
-      "id": 3
+      "id": 2
     }
   ]
 }
