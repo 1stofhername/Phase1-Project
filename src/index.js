@@ -86,9 +86,10 @@ const postRenderer = function (postObj) {
     card.append(h2,img,goals,attendeeCnt,attendBtn);
 
     h2.innerHTML = postObj.title;
+    h2.classList.add('post-title');
     goals.innerHTML = postObj.goals;
     attendBtn.innerHTML = 'Attend!';
     attendeeCnt.innerHTML = postObj.participants+' community members participating';
     img.src = postObj.image;
-    img.classList.add('event-img');
+    img.classList.add('post-img');
 }
