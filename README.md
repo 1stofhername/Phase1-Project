@@ -8,9 +8,9 @@ Community Activator will be used to post and discover information on community e
 
 Login page
 
-Event post form (submit)
+Event post form
 
-Display posted events 
+Render events 
 
 Click to participate in event 
 
@@ -26,5 +26,15 @@ Set attendee goals
 
 Display attendee goal percentage met
 
+## MVP
 
+Event post form
+
+Render events 
+
+Click to participate in event 
+
+
+Photo by Anna Shvets from Pexels
+Photo by Lara Jameson from Pexels
 
