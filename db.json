@@ -3,12 +3,12 @@
     {
       "title": "Rainier Avenue Trash Cleanup",
       "facilitator": "Zollie Shore",
-      "image": "https://images.pexels.com/photos/9324312/pexels-photo-9324312.jpeg",
+      "image": "https://npr.brightspotcdn.com/dims4/default/cc22865/2147483647/strip/true/crop/4000x3522+0+0/resize/880x775!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fwesa%2Ffiles%2F201710%2FAP_17112631939507.jpg",
       "goals": "Pickup litter on Rainier Avenue South between Orcas St and Graham St.",
       "date": "2022-02-02",
       "startTime": "2pm",
       "endTime": "5pm",
-      "participants": 0,
+      "participants": 24,
       "id": 1
     },
     {
@@ -19,8 +19,19 @@
       "date": "2022-06-15",
       "startTime": "2pm",
       "endTime": "3pm",
-      "participants": 0,
+      "participants": 20,
       "id": 2
+    },
+    {
+      "title": "Khali's Ceramics Grand Opening",
+      "facilitator": "Small Business Committee",
+      "image": "https://images.pexels.com/photos/7310197/pexels-photo-7310197.jpeg",
+      "goals": "Support small business opening 3600 23rd Ave South",
+      "date": "2022-10-15",
+      "startTime": "10am",
+      "endTime": "3pm",
+      "participants": 11,
+      "id": 3
     }
   ]
 }
