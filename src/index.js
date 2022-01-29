@@ -122,8 +122,3 @@ const postRenderer = function (postObj) {
     
     
 }
-
-//   const likeHandler = ()=>{
-//     const likeBtn = document.querySelector('#card-btn');
-//     likeBtn.addEventListener('click', (e)=>{console.log(e)});
-//   }

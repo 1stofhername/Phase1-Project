@@ -1,8 +1,8 @@
-# Community activator
+# Community Activator
 
 ## Overview
 
-Community Activator will be used to post and discover information on community events and resources. Community activator will track names of events, the name of the community member or organization facilitating, goal(s) of event, time and date of event and the number of community members participating in the event. Users will be able to create event posts, and mark that they are participating in events.
+<code>Community Activator</code> is an online message board that enable community members to recognize and respond to community-specific needs for support, action, or education. Community activator will track names of events, the name of the community member or organization facilitating, goal(s) of event, time and date of event and the number of community members participating in the event. Users will be able to create event posts, view posts others are facilitating, and mark that they are participating in events.
 
 ## Features
 
@@ -28,13 +28,28 @@ Display attendee goal percentage met
 
 ## MVP
 
-Event post form
+1. Event post form
 
-Render events 
+2. Render events 
 
-Click to participate in event 
+3. Click to participate in event 
+
+## Stretch goals
+
+4. Login page 
+
+5. Community member registration
+
+6. Set and display attendee goals
+
+7. Edit event
+
+8. Delete event
+
+9. Add event location
+
+10. Donate to events/event facilitators
 
 
-Photo by Anna Shvets from Pexels
-Photo by Lara Jameson from Pexels
+
 
