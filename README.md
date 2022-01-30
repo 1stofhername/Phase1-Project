@@ -15,6 +15,13 @@
 
 ## Usage
 
+### To add your own event
+
+1. Click the 'engage your community' button to reveal the event post form.
+
+2. Add relevant event information to the correct fields. 
+
+3. Click the 'Post' button to add your event to the board.
 
 
 ## Features
