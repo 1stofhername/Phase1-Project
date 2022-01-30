@@ -6,11 +6,16 @@
 
 ## Setup
 
-1. To start the program, launch the index.html file in the web browser of your choice.
+1. Initialize the json server by opening terminal and navigating to the folder containing the project files. 
 
-2. Initialize the json server by opening terminal and navigating to the folder containing the project files. 
+2. While inside the project folder, type <code>json-server --watch db.json</code>
 
-3. While inside the project folder, type <code>json-server --watch db.json</code>
+3. To start the program, launch the index.html file in the web browser of your choice.
+
+
+## Usage
+
+
 
 ## Features
 
@@ -57,6 +62,10 @@ Display attendee goal percentage met
 9. Add event location
 
 10. Donate to events/event facilitators
+
+11. Add a calendar event to users calendar when 'Participate!' button is clicked
+
+12. List what community members have clicked the 'Participate!' button
 
 
 

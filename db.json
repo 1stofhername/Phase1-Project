@@ -8,7 +8,7 @@
       "date": "2022-02-02",
       "startTime": "2pm",
       "endTime": "5pm",
-      "participants": 28,
+      "participants": 32,
       "id": 1
     },
     {
@@ -19,7 +19,7 @@
       "date": "2022-06-15",
       "startTime": "2pm",
       "endTime": "3pm",
-      "participants": 20,
+      "participants": 23,
       "id": 2
     },
     {
@@ -30,7 +30,7 @@
       "date": "2022-10-15",
       "startTime": "10am",
       "endTime": "3pm",
-      "participants": 11,
+      "participants": 15,
       "id": 3
     }
   ]
