@@ -71,6 +71,8 @@ Display attendee goal percentage met
 
 5. Community member registration
 
+6. Community members will be able to choose community location, enter skills/resources they would like to offer community and track event posts they are interested in
+
 6. Set and display attendee goals
 
 7. Edit event
@@ -84,6 +86,8 @@ Display attendee goal percentage met
 11. Add a calendar event to users calendar when 'Participate!' button is clicked
 
 12. List what community members have clicked the 'Participate!' button
+
+13. Users will be able to sort community event posts by type (e.g. education, member resource, support etc.)
 
 
 
