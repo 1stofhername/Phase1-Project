@@ -17,11 +17,22 @@
 
 ### To add your own event
 
-1. Click the 'engage your community' button to reveal the event post form.
+![usage](https://user-images.githubusercontent.com/94088088/151682915-d360bd06-eade-4b4d-a0ae-346869ca4812.gif)
+
+
+1. Click the 'Engage Your Community' button to reveal the event post form.
 
 2. Add relevant event information to the correct fields. 
 
 3. Click the 'Post' button to add your event to the board.
+
+## To view other events
+
+1. If you have just finished posting an event, click the 'Close event form button' to hide the form.
+
+2. Scroll through posted events
+
+3. To attend an event, click 
 
 
 ## Features
