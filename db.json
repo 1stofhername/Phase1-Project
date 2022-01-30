@@ -32,6 +32,17 @@
       "endTime": "3pm",
       "participants": 15,
       "id": 3
+    },
+    {
+      "title": "Something",
+      "facilitator": "Someone",
+      "image": "http://image.jpeg",
+      "goals": "Do something",
+      "date": "2022-12-25",
+      "startTime": "4pm",
+      "endTime": "5pm",
+      "participants": 0,
+      "id": 4
     }
   ]
 }
