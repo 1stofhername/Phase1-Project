@@ -15,8 +15,6 @@
 
 ## Usage
 
-![usage](https://user-images.githubusercontent.com/94088088/151682915-d360bd06-eade-4b4d-a0ae-346869ca4812.gif)
-
 ### To add your own event
 
 ![usage](https://user-images.githubusercontent.com/94088088/151682915-d360bd06-eade-4b4d-a0ae-346869ca4812.gif)
