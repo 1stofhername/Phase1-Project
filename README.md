@@ -37,35 +37,17 @@
 
 ## Features
 
-Login page
+### MVP
 
-Event post form
+1. Hideable event post form
 
-Render events 
+2. Render events to the DOM from info input into form
 
-Click to participate in event 
+3. Store event data in database
 
-Community member registration
+4. Click to participate in event 
 
-Poster can edit event
-
-Poster can delete event
-
-Add event location
-
-Set attendee goals
-
-Display attendee goal percentage met
-
-## MVP
-
-1. Event post form
-
-2. Render events 
-
-3. Click to participate in event 
-
-## Stretch goals
+### Stretch goals
 
 4. Login page 
 
