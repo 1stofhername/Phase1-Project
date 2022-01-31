@@ -38,13 +38,13 @@ const submitHandler = ()=>{
 
         e.preventDefault();
 
-        const formData = new postEvent (title, facilitator, image, goals, date, startTime, startTimeAmPm, endTime, endTimeAmPm);
-        formData.post();
+        const formData = new Post (title, facilitator, image, goals, date, startTime, startTimeAmPm, endTime, endTimeAmPm);
+        formData.postData();
         form.reset();
     });
 }
 
-class postEvent {
+class Post {
     constructor(title, facilitator, image, goals, date, startTime, startTimeAmPm, endTime, endTimeAmPm){
         this.title = title;
         this.facilitator = facilitator;
@@ -55,7 +55,7 @@ class postEvent {
         this.endTime = endTime+endTimeAmPm;
         this.participants = 0;   
     }
-    post(){
+    postData(){
         fetch('http://localhost:3000/posts', {
             method : 'POST',
             headers : {
