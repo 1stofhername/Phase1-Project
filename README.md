@@ -75,5 +75,11 @@
 13. Users will be able to sort community event posts by type (e.g. education, member resource, support etc.)
 
 
+##Attribution
+
+Photo by Anna Shvets from Pexels
+Photo by Lara Jameson from Pexels
+
+
 
 
