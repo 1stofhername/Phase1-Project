@@ -6,11 +6,14 @@
 
 ## Setup
 
-1. Initialize the json server by opening terminal and navigating to the folder containing the project files. 
+1.If JSON-server is not already installed, run <code>npm install -g json-server</code> in terminal to install JSON-server
 
-2. While inside the project folder, type <code>json-server --watch db.json</code>
 
-3. To start the program, launch the index.html file in the web browser of your choice.
+2. Initialize the json server by opening terminal and navigating to the folder containing the project files. 
+
+3. While inside the project folder, type <code>json-server --watch db.json</code>
+
+4. To start the program, launch the index.html file in the web browser of your choice.
 
 
 ## Usage
