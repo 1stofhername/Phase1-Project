@@ -137,6 +137,11 @@ button:hover {
   width:8rem;
 }
 
+p#time{
+  text-align:center;
+  color:#434343;
+}
+
 p.attendee-count {
   text-align:center;
 }

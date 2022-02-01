@@ -5,10 +5,10 @@
       "facilitator": "Zollie Shore",
       "image": "https://npr.brightspotcdn.com/dims4/default/cc22865/2147483647/strip/true/crop/4000x3522+0+0/resize/880x775!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fwesa%2Ffiles%2F201710%2FAP_17112631939507.jpg",
       "goals": "Pickup litter on Rainier Avenue South between Orcas St and Graham St.",
-      "date": "2022-02-02",
+      "date": "02-02-2022",
       "startTime": "2pm",
       "endTime": "5pm",
-      "participants": 36,
+      "participants": 37,
       "id": 1
     },
     {
@@ -16,10 +16,10 @@
       "facilitator": "Nyema Ronin",
       "image": "https://images.pexels.com/photos/5028324/pexels-photo-5028324.jpeg",
       "goals": "Plant a container full of hardy, edible plants and herbs to take home.",
-      "date": "2022-06-15",
+      "date": "06-15-2022",
       "startTime": "2pm",
       "endTime": "3pm",
-      "participants": 23,
+      "participants": 30,
       "id": 2
     },
     {
@@ -27,22 +27,11 @@
       "facilitator": "Small Business Committee",
       "image": "https://images.pexels.com/photos/7310197/pexels-photo-7310197.jpeg",
       "goals": "Support small business opening 3600 23rd Ave South",
-      "date": "2022-10-15",
+      "date": "10-15-2022",
       "startTime": "10am",
       "endTime": "3pm",
-      "participants": 16,
+      "participants": 18,
       "id": 3
-    },
-    {
-      "title": "Something",
-      "facilitator": "Someone",
-      "image": "http://image.jpeg",
-      "goals": "Do something",
-      "date": "2022-12-25",
-      "startTime": "4pm",
-      "endTime": "5pm",
-      "participants": 0,
-      "id": 4
     }
   ]
 }
