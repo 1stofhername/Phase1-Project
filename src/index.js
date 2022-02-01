@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         eventCreate = !eventCreate;
         if (eventCreate) {
             eventFormContainer.style.display = 'block';
-            improveBtn.innerHTML = 'Close event form';
+            improveBtn.innerHTML = 'Hide event form';
         } else {
             eventFormContainer.style.display = 'none';
             improveBtn.innerHTML = 'Engage your community!';
