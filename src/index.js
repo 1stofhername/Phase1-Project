@@ -102,6 +102,9 @@ const postRenderer = function (postObj) {
     attendBtn.setAttribute('id', 'card-btn');
     attendeeCnt.classList.add('attendee-count');
     img.classList.add('card-img');
+    img.setAttribute('onerror', 'this.src="https://images.pexels.com/photos/3797402/pexels-photo-3797402.jpeg"');
+
+    
     
     attendBtn.addEventListener('click', (e)=>{
         let newAttendeeCnt = postObj.participants +=1
