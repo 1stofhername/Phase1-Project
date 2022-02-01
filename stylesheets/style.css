@@ -144,3 +144,8 @@ p.attendee-count {
 ::placeholder{
   font-size:1rem;
 }
+
+select{
+  font-family: monospace;
+  font-size: 1rem;
+}
