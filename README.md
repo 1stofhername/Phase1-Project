@@ -1,8 +1,8 @@
-# Community Activator
+# Cul-de-sac
 
 ## Overview
 
-<code>Community Activator</code> is an online message board that enable community members to recognize and respond to community-specific needs for support, action, or education. Community activator will track names of events, the name of the community member or organization facilitating, goal(s) of event, time and date of event and the number of community members participating in the event. Users will be able to create event posts, view posts others are facilitating, and mark that they are participating in events.
+<code>Cul-de-sac</code> is an online message board that enable community members to recognize and respond to community-specific needs for support, action, or education. Community activator will track names of events, the name of the community member or organization facilitating, goal(s) of event, time and date of event and the number of community members participating in the event. Users will be able to create event posts, view posts others are facilitating, and mark that they are participating in events.
 
 ## Setup
 
