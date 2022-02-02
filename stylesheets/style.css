@@ -64,7 +64,7 @@ p.card-text{
 }
 
 #card-btn {
-  margin:15px;
+  margin:20px;
 }
 
 button {
@@ -138,6 +138,12 @@ button:hover {
 }
 
 p#time{
+  text-align:center;
+  color:#434343;
+  margin-top:-10px;
+}
+
+p#facilitator{
   text-align:center;
   color:#434343;
 }

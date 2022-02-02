@@ -78,9 +78,9 @@
 
 ## Attribution
 
-Photo by Anna Shvets from Pexels
-Photo by Lara Jameson from Pexels
-Photo by RODNAE Productions from Pexels
+Photo by Anna Shvets from Pexels<br>
+Photo by Lara Jameson from Pexels<br>
+Photo by RODNAE Productions from Pexels<br>
 Photo by Matheus Bertelli from Pexels
 
 

@@ -86,16 +86,19 @@ const postRenderer = function (postObj) {
     const attendBtn = document.createElement('button');
     const attendeeCnt = document.createElement('p');
     const time = document.createElement('p');
+    const facilitator = document.createElement('p')
 
     postCollection.appendChild(card);
     card.classList.add('post-card');
-    card.append(h2,img,p,time,attendeeCnt,attendBtn);
+    card.append(h2,img,p,facilitator,time,attendeeCnt,attendBtn);
     card.setAttribute('id', `${postObj.id}`);
     time.setAttribute('id', 'time')
+    facilitator.setAttribute('id', 'facilitator')
 
     h2.innerHTML = postObj.title;
     p.innerHTML = postObj.goals;
-    time.innerHTML = 'Date/Time: ' + postObj.date +' '+ postObj.startTime+' - '+postObj.endTime;
+    time.innerHTML = 'Date/Time: ' + postObj.date +'  '+ postObj.startTime+'-'+postObj.endTime;
+    facilitator.innerHTML = 'Facilitator: ' + postObj.facilitator;
 
     attendBtn.innerHTML = 'Participate!';
     attendeeCnt.innerHTML = postObj.participants+' community members participating';
