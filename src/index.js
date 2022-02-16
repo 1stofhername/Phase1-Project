@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
 const submitHandler = ()=>{
     const form = document.getElementById('event-form');
     form.addEventListener('submit', (e)=>{
+        const improveBtn = document.querySelector('#improve-community-btn');
+        const eventFormContainer = document.querySelector('div.container#event');
         let title = e.target['event-title'].value;
         let facilitator = e.target['facilitator'].value;
         let image = e.target['image'].value;
@@ -35,8 +37,16 @@ const submitHandler = ()=>{
         let startTimeAmPm = e.target['start-time-am-pm'].value;
         let endTime = e.target['end-time'].value;
         let endTimeAmPm = e.target['end-time-am-pm'].value;
-
+        
         e.preventDefault();
+
+        //Hide event form after submit
+
+        eventFormContainer.style.display = 'none';
+        improveBtn.innerHTML = 'Engage your community!';
+
+       
+        //Instatiate post class
 
         const formData = new Post (title, facilitator, image, goals, date, startTime, startTimeAmPm, endTime, endTimeAmPm);
         formData.postData();
@@ -63,7 +73,7 @@ class Post {
                 'Accept' : 'application/JSON'
             },
             body : JSON.stringify(this)
-        }).then(res=>res.json())
+        }).then(res=>res.json(res.statusText === 'Created' ? alert('Event added!'): Alert('Post unsuccessful')))
         .then(data=>postRenderer(data))
 
     }
@@ -132,3 +142,11 @@ const postRenderer = function (postObj) {
     
     
 }
+
+const arr = ['Cake', 'caramels', 'muffin', 'lemon', 'drops', 'chocolate.', 'Tootsie', 'roll', 'lemon', 'drops', 'muffin', 'danish', 'lollipop.', 'Jelly', 'halvah', 'croissant', 'sesame', 'snaps', 'bonbon', 'powder.', 'Tart', 'jelly', 'beans', 'apple', 'pie', 'brownie', 'wafer', 'fruitcake', 'halvah', 'sweet', 'roll', 'bonbon.', 'Soufflé', 'brownie', 'sugar', 'plum', 'halvah', 'powder', 'danish.', 'Chupa', 'chups', 'cookie', 'cupcake', 'wafer', 'sweet', 'roll', 'dragée', 'icing.', 'Cheesecake', 'toffee', 'cupcake', 'tiramisu', 'carrot', 'cake', 'jujubes.', 'Powder', 'tiramisu', 'gingerbread', 'pastry', 'chocolate', 'pastry', 'soufflé', 'candy', 'canes', 'carrot', 'cake.', 'Jelly-o', 'biscuit', 'oat', 'cake', 'gummi', 'bears', 'sweet', 'roll', 'cotton', 'candy', 'carrot', 'cake', 'candy', 'canes.']
+let arrCount=0
+let finalValue
+
+arr.forEach(word=>{arrCount += word.length  })
+console.log(arrCount)
+
