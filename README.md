@@ -83,10 +83,10 @@
 
 ## Attribution
 
-Photo by Anna Shvets from Pexels<br>
-Photo by Lara Jameson from Pexels<br>
-Photo by RODNAE Productions from Pexels<br>
-Photo by Matheus Bertelli from Pexels
+Photo by <a href="https://www.pexels.com/@shvetsa">Anna Shvets</a> from Pexels<br>
+Photo by <a href="https://www.pexels.com/@lara-jameson">Lara Jameson</a> from Pexels<br>
+Photo by <a href="https://www.pexels.com/@rodnae-prod">RODNAE Productions</a> from Pexels<br>
+Photo by <a href="https://www.pexels.com/@bertellifotografia">Matheus Bertelli</a> from Pexels
 
 
 
