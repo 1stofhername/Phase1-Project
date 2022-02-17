@@ -54,6 +54,17 @@
       "endTime": "3pm",
       "participants": 0,
       "id": 5
+    },
+    {
+      "title": "Something",
+      "facilitator": "Alicia",
+      "image": "http://umich.edu/~chemh215/W11HTML/SSG5/ssg5.2/FRex.png",
+      "goals": "",
+      "date": "",
+      "startTime": "12am",
+      "endTime": "12am",
+      "participants": 0,
+      "id": 6
     }
   ]
 }

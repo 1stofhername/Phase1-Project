@@ -41,38 +41,43 @@
 ## Features
 
 ### MVP
+<ol>
 
-1. Hideable event post form
+<li>Hideable event post form</li>
 
-2. Render events to the DOM from info input into form
+<li>Render events to the DOM from info input into form</li>
 
-3. Store event data in database
+<li>Store event data in database</li>
 
-4. Click to participate in event 
+<li>Click to participate in event</li>
+
+<li>Notification of successful event post </li>
 
 ### Stretch goals
 
-4. Login page 
+<li>Error message for unsuccessful posts</li>
 
-5. Community member registration
+<li> Login page</li>
 
-6. Community members will be able to choose community location, enter skills/resources they would like to offer community and track event posts they are interested in
+<li>Community member registration</li>
 
-6. Set and display attendee goals
+<li>Community members will be able to choose community location, enter skills/resources they would like to offer community and track event posts they are interested in</li>
 
-7. Edit event
+<li>Set and display attendee goals</li>
 
-8. Delete event
+<li>Edit event</li>
 
-9. Add event location
+<li>Delete event</li>
 
-10. Donate to events/event facilitators
+<li>Add event location</li>
 
-11. Add a calendar event to users calendar when 'Participate!' button is clicked
+<li>Donate to events/event facilitators</li>
 
-12. List what community members have clicked the 'Participate!' button
+<li>Add a calendar event to users calendar when 'Participate!' button is clicked</li>
 
-13. Users will be able to sort community event posts by type (e.g. education, member resource, support etc.)
+<li>List what community members have clicked the 'Participate!' button</li>
+
+<li>Users will be able to sort community event posts by type (e.g. education, member resource, support etc.)</li>
 
 
 
