@@ -73,7 +73,7 @@ class Post {
                 'Accept' : 'application/JSON'
             },
             body : JSON.stringify(this)
-        }).then(res=>res.json(res.statusText === 'Created' ? alert('Event added!'):null))
+        }).then(res=>res.json(res.statusText === 'Created' ? alert('Event successfully added!'):null))
         .then(data=>postRenderer(data))
         .catch(function error (){
             alert("Something went wrong");
