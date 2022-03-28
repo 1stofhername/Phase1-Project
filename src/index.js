@@ -4,15 +4,43 @@ let Search = false;
 
 //Listens for 'improve' button click and Toggles post form
 
+const postType = document.getElementById('post-type-form');
+postType.addEventListener('change', (e)=>{togglePostForms(e)})
+
+function togglePostForms(e){
+    const eventForm = document.getElementById("event-form");
+    const needForm = document.getElementById("need-form");
+    const resourceForm = document.getElementById('resource-form');
+    const formTitle = document.getElementById('form-title');
+    if(e.target.value === 'event'){
+        eventForm.style.display="block";
+        needForm.style.display="none";
+        resourceForm.style.display="none";
+        formTitle.innerHTML = 'Post a community event!'
+    } else if (e.target.value === 'need'){
+        needForm.style.display="block";
+        eventForm.style.display="none";
+        resourceForm.style.display="none";
+        formTitle.innerHTML = 'Post a community need!'
+    } 
+    else if (e.target.value === 'resource'){
+        formTitle.innerHTML = 'Be a community resource!'
+        needForm.style.display="none";
+        eventForm.style.display="none";
+        resourceForm.style.display="block";
+    }
+}
+
+
 document.addEventListener('DOMContentLoaded', ()=> {
     const improveBtn = document.querySelector('#improve-community-btn');
-    const eventFormContainer = document.querySelector('div.container#event');
+    const eventFormContainer = document.querySelector('div.container#post-form');
 
     improveBtn.addEventListener('click', () => {
         eventCreate = !eventCreate;
         if (eventCreate) {
             eventFormContainer.style.display = 'block';
-            improveBtn.innerHTML = 'Hide event form';
+            improveBtn.innerHTML = 'Hide post form';
         } else {
             eventFormContainer.style.display = 'none';
             improveBtn.innerHTML = 'Engage your community!';
@@ -25,6 +53,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
     
    
 });
+
+
 
 //Post submit
 

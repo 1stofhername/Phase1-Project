@@ -55,6 +55,28 @@
       "endTime": "2pm",
       "participants": 4,
       "id": 4
+    },
+    {
+      "title": "",
+      "facilitator": "",
+      "image": "",
+      "goals": "",
+      "date": "",
+      "startTime": "12am",
+      "endTime": "12am",
+      "participants": 0,
+      "id": 5
+    },
+    {
+      "title": "Something",
+      "facilitator": "Alicia",
+      "image": "hello",
+      "goals": "Collect 100 cans of food to donate to the foodbank at 3rd street and Main Avenue.",
+      "date": "2022-06-15",
+      "startTime": "12am",
+      "endTime": "12am",
+      "participants": 0,
+      "id": 6
     }
   ]
 }
