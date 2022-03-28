@@ -2,6 +2,7 @@ let eventCreate = false;
 let resourceCreate = false;
 let Search = false;
 
+//Listens for 'improve' button click and Toggles post form
 
 document.addEventListener('DOMContentLoaded', ()=> {
     const improveBtn = document.querySelector('#improve-community-btn');
@@ -24,6 +25,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
     
    
 });
+
+//Post submit
 
 
 const submitHandler = ()=>{
@@ -49,13 +52,13 @@ const submitHandler = ()=>{
         improveBtn.innerHTML = 'Engage your community!';
 
        
-        //Instatiate post class
+        //Instatiate event post class
 
         const formData = new Post (title, facilitator, image, goals, date, startTime, startTimeAmPm, endTime, endTimeAmPm);
         formData.postData();
         form.reset();
     });
-}
+};
 
 class Post {
     constructor(title, facilitator, image, goals, date, startTime, startTimeAmPm, endTime, endTimeAmPm){
@@ -86,6 +89,7 @@ class Post {
     }
 }
 
+//Render cards
 
 const fetchPost = function (){
     fetch('http://localhost:3000/posts')
@@ -128,7 +132,7 @@ const postRenderer = function (postObj) {
     img.classList.add('card-img');
     img.setAttribute('onerror', 'this.src="https://images.pexels.com/photos/3797402/pexels-photo-3797402.jpeg"');
 
-    
+    //PATCH participants
     
     attendBtn.addEventListener('click', (e)=>{
         let newAttendeeCnt = postObj.participants +=1
@@ -143,17 +147,8 @@ const postRenderer = function (postObj) {
         })
       }).then(res=>res.json())
       .then(data=>{attendeeCnt.innerHTML = data.participants+' community members participating'
-    })
-      
+    })      
       })
-    
-    
 }
 
-const arr = ['Cake', 'caramels', 'muffin', 'lemon', 'drops', 'chocolate.', 'Tootsie', 'roll', 'lemon', 'drops', 'muffin', 'danish', 'lollipop.', 'Jelly', 'halvah', 'croissant', 'sesame', 'snaps', 'bonbon', 'powder.', 'Tart', 'jelly', 'beans', 'apple', 'pie', 'brownie', 'wafer', 'fruitcake', 'halvah', 'sweet', 'roll', 'bonbon.', 'Soufflé', 'brownie', 'sugar', 'plum', 'halvah', 'powder', 'danish.', 'Chupa', 'chups', 'cookie', 'cupcake', 'wafer', 'sweet', 'roll', 'dragée', 'icing.', 'Cheesecake', 'toffee', 'cupcake', 'tiramisu', 'carrot', 'cake', 'jujubes.', 'Powder', 'tiramisu', 'gingerbread', 'pastry', 'chocolate', 'pastry', 'soufflé', 'candy', 'canes', 'carrot', 'cake.', 'Jelly-o', 'biscuit', 'oat', 'cake', 'gummi', 'bears', 'sweet', 'roll', 'cotton', 'candy', 'carrot', 'cake', 'candy', 'canes.']
-let arrCount=0
-let finalValue
-
-arr.forEach(word=>{arrCount += word.length  })
-console.log(arrCount)
 
