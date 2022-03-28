@@ -8,7 +8,7 @@
       "date": "02-02-2022",
       "startTime": "2pm",
       "endTime": "5pm",
-      "participants": 41,
+      "participants": 42,
       "id": 1
     },
     {
@@ -19,7 +19,7 @@
       "date": "06-15-2022",
       "startTime": "2pm",
       "endTime": "3pm",
-      "participants": 37,
+      "participants": 40,
       "id": 2
     },
     {
@@ -30,41 +30,19 @@
       "date": "10-15-2022",
       "startTime": "10am",
       "endTime": "3pm",
-      "participants": 25,
+      "participants": 27,
       "id": 3
-    },
-    {
-      "title": "Columbia Food Drive",
-      "facilitator": "Alicia",
-      "image": "something.jpeg",
-      "goals": "Collect 100 cans of food to donate to the foodbank at 3rd street and Main Avenue.",
-      "date": "2022-06-15",
-      "startTime": "4pm",
-      "endTime": "5pm",
-      "participants": 13,
-      "id": 4
-    },
-    {
-      "title": "Columbia Food Drive",
-      "facilitator": "Alicia",
-      "image": "http://umich.edu/~chemh215/W11HTML/SSG5/ssg5.2/FRex.png",
-      "goals": "Collect 100 cans of food to donate to the foodbank at 3rd street and Main Avenue.",
-      "date": "2022-10-15",
-      "startTime": "2pm",
-      "endTime": "3pm",
-      "participants": 0,
-      "id": 5
     },
     {
       "title": "Something",
       "facilitator": "Alicia",
-      "image": "http://umich.edu/~chemh215/W11HTML/SSG5/ssg5.2/FRex.png",
-      "goals": "",
-      "date": "",
-      "startTime": "12am",
-      "endTime": "12am",
-      "participants": 0,
-      "id": 6
+      "image": "",
+      "goals": "Collect 100 cans of food to donate to the foodbank at 3rd street and Main Avenue.",
+      "date": "2022-03-05",
+      "startTime": "3pm",
+      "endTime": "2pm",
+      "participants": 4,
+      "id": 4
     }
   ]
 }

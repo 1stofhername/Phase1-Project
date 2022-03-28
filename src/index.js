@@ -1,4 +1,7 @@
-let eventCreate = false
+let eventCreate = false;
+let resourceCreate = false;
+let Search = false;
+
 
 document.addEventListener('DOMContentLoaded', ()=> {
     const improveBtn = document.querySelector('#improve-community-btn');
