@@ -41,10 +41,11 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     improveBtn.addEventListener('click', () => {
         eventCreate = !eventCreate;
-        if (eventCreate) {
+        if (eventCreate && isLoggedIn) {
             eventFormContainer.style.display = 'block';
             improveBtn.innerHTML = 'Hide post form';
         } else {
+            !isLoggedIn? alert('Please login to continue'):null;
             eventFormContainer.style.display = 'none';
             improveBtn.innerHTML = 'Engage your community!';
             
@@ -74,8 +75,8 @@ function validateLogin(login){
             if(user.password===login.password){
                 isLoggedIn=true;
                 document.getElementById('login-form').style=("display:none");
-                document.querySelector('#improve-community-btn').removeAttribute('style');
-                console.log(isLoggedIn)
+                user=user.username
+                console.log(user)
             } else {alert('Password incorrect')}
         }else {alert("Account doesn't exist")}}))
         .catch(function error (){
@@ -130,7 +131,7 @@ class Post {
         this.participants = 0;   
     }
     postData(){
-        fetch('http://localhost:3000/posts', {
+        fetch('http://localhost:3000/events', {
             method : 'POST',
             headers : {
                 'Content-Type' : 'application/JSON',
@@ -150,7 +151,7 @@ class Post {
 //Render cards
 
 const fetchPost = function (){
-    fetch('http://localhost:3000/posts')
+    fetch('http://localhost:3000/events')
             .then((res)=>res.json())
             .then(postData=>postData.forEach(post => postRenderer(post)))
         }
@@ -193,8 +194,9 @@ const postRenderer = function (postObj) {
     //PATCH participants
     
     attendBtn.addEventListener('click', (e)=>{
+        if(isLoggedIn){
         let newAttendeeCnt = postObj.participants +=1
-      fetch(`http://localhost:3000/posts/${card.id}`, {
+      fetch(`http://localhost:3000/events/${card.id}`, {
         method : 'PATCH',
         headers : {
           'Content-Type' : 'application/JSON',
@@ -206,7 +208,9 @@ const postRenderer = function (postObj) {
       }).then(res=>res.json())
       .then(data=>{attendeeCnt.innerHTML = data.participants+' community members participating'
     })      
-      })
+    } else {
+        alert('Please login to continue')
+    }})
 }
 
 
