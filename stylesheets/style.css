@@ -42,6 +42,18 @@ h1{
   box-shadow: 0px 0px 20px rgba(0,0,0,.5);
 }
 
+.post-card:hover {
+  text-align: left;
+  border: #cbcbcb solid 1px;
+  border-radius: 15px 50px 30px;
+  padding: 1rem;
+  width: 30rem;
+  height: max-content + 3px;
+  display: inline-grid;
+  margin: 3rem 3rem;
+  box-shadow: 0px 0px 20px rgba(0,0,0,.5);
+}
+
 .card-title {
   text-align:center;
   margin-bottom:2rem;
@@ -187,4 +199,8 @@ select{
 
 #improve-button-container{
 align-content: center;
+}
+
+em {
+  font-weight: bold;
 }

@@ -2,7 +2,7 @@ let eventCreate = false;
 let resourceCreate = false;
 let Search = false;
 let isLoggedIn = false;
-let user=null;
+let currentUser=null;
 
 //Listens for 'improve' button click and Toggles post form
 
@@ -52,43 +52,120 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
         }
     });
-    submitHandler();
+    postFormSubmitHandler();
     fetchPost();
+    renderLogin();
     
    
 });
 
 //Login form
 
-loginForm = document.getElementById('login');
-loginForm.addEventListener('submit', (e)=>{
+function renderLogin (user){
+    if(!isLoggedIn){
+    const loginContainer = document.getElementById('login-container');
+    const loginForm = document.createElement('form');
+    const loginTitle = document.createElement('h2');
+    const usernameInput = document.createElement('input');
+    const passInput = document.createElement('input');
+    const userLabel = document.createElement('label');
+    const passLabel = document.createElement('label');
+    const createAcct = document.createElement('p');
+    const loginSub = document.createElement('input')
+
+    const userAttr={type:"text", name:"username", id:"username", "required":""};
+    const passAttr = {type:"password", name:"password", id:"password", "required":""}
+    const subAttr={type:"submit", name:"sumbit", id:"sumbit", class:"submit-login", value:"Login"};
+    
+    loginContainer.appendChild(loginTitle);
+    loginContainer.appendChild(loginForm);
+    loginForm.setAttribute('id', 'login')
+    loginForm.appendChild(userLabel);
+    userLabel.setAttribute('for', 'username')
+    loginForm.appendChild(usernameInput);
+    handleSetAttributes(usernameInput, userAttr)
+    loginForm.appendChild(passLabel);
+    passLabel.setAttribute('for', 'password');
+    passLabel.innerHTML="Password"
+    loginForm.appendChild(passInput);
+    handleSetAttributes(passInput, passAttr)
+    loginForm.appendChild(loginSub);
+    handleSetAttributes(loginSub, subAttr);
+    loginForm.appendChild(createAcct);
+    createAcct.innerHTML="Don't have an account? Create one";
+
+    usernameInput.setAttribute('type',"text")
+    loginTitle.innerHTML="Login to start building your community!";
+    loginTitle.setAttribute('id', 'login-title');
+    userLabel.innerHTML="Username";
+
+    function handleSetAttributes(element, attributes) {
+        Object.keys(attributes).forEach(attr=>{
+            element.setAttribute(attr,attributes[attr])
+        })
+    }
+    loginForm.addEventListener('submit', (e)=>{
     e.preventDefault();
-    validateLogin({"username":`${e.target.username.value}`, "password":`${e.target.password.value}`})
-})
+    loginFormSubmitHandler({"username":`${e.target.username.value}`, "password":`${e.target.password.value}`})
+})} else { 
+    const {userName, firstName, lastName, profilePhoto} = user;
+const loginContainer = document.getElementById('login-container');
+const img = document.createElement('img');
+
+document.getElementById('login').style=("display:none");
+document.getElementById('login-title').innerHTML=`Welcome, ${user.firstName}!`
+
+loginContainer.appendChild(img);
+img.setAttribute=('url', profilePhoto);
+}
+}
+
+
+
 
 //Login submit
 
-function validateLogin(login){
+function loginFormSubmitHandler(login){
     fetch('http://localhost:3000/users')
     .then(res=>res.json())
-        .then(users=>users.forEach((user)=>{if(user.username===login.username){
+        .then(users=>users.forEach((user)=>{if(user.userName===login.username){
             if(user.password===login.password){
                 isLoggedIn=true;
-                document.getElementById('login-form').style=("display:none");
-                user=user.username
-                console.log(user)
-            } else {alert('Password incorrect')}
-        }else {alert("Account doesn't exist")}}))
+                currentUser = user.userName;
+                renderLogin(user);
+            } else {
+                alert('Password incorrect');
+            }
+        } else { 
+            alert(`Username: \'${login.username}\' doesn't exist`)
+        }}))
         .catch(function error (){
             alert("Something went wrong");
-            console.log('error');
+            console.log(error);
         })
 }
+
+function renderLogInDiv (user) {
+    const {userName, firstName, lastName, profilePhoto} = user
+    const loginContainer = document.getElementById('login-container');
+    const img = document.createElement('img');
+
+    document.getElementById('login').style=("display:none");
+    document.getElementById('login-title').innerHTML=`Welcome, ${user.firstName}!`
+
+    loginContainer.appendChild(img);
+    img.setAttribute=('url', profilePhoto);
+
+    
+
+}
+
+
 
 //Post submit
 
 
-const submitHandler = ()=>{
+const postFormSubmitHandler = ()=>{
     const form = document.getElementById('event-form');
     form.addEventListener('submit', (e)=>{
         const improveBtn = document.querySelector('#improve-community-btn');
