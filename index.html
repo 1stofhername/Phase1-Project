@@ -16,7 +16,20 @@
         <h2>Find a resource...Be a resource...</h2></span>
     </div>
 
-    <div class = 'container' id = 'post-form'>
+    <div class = 'container-login' id="login-form">
+      <h2 id ='login-form-title'>Login to start building community!</h2>
+      <br>
+      <form id="login">
+        <label for="username">Username</label>
+        <input type="text" name="username" id ="username" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+        <input type="submit" name="submit" value="Login" class="submit-login"/>
+        <p>Don't have an account?</p>
+      </form>
+    </div>
+    
+    <div class = 'container' id = 'post-form' style="display:none;">
 
       <h2 id='form-title'>Post a community event!</h2>
         <br>
@@ -254,10 +267,10 @@
 <!-- Improve Community Button -->
 
     <p style="text-align:center">
-    <button id ="improve-community-btn">Engage your community!</button>
+    <button id ="improve-community-btn" style="display:none;" >Engage your community!</button>
     </p>
-  
-    <div id = 'post-container'></div>
+
+    <div class="password-protected" id = 'post-container'></div>
   
 
 

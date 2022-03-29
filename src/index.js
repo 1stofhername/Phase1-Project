@@ -1,6 +1,8 @@
 let eventCreate = false;
 let resourceCreate = false;
 let Search = false;
+let loggedOut = true;
+let user=null;
 
 //Listens for 'improve' button click and Toggles post form
 
@@ -54,7 +56,35 @@ document.addEventListener('DOMContentLoaded', ()=> {
    
 });
 
+//Login form
 
+loginForm = document.getElementById('login');
+loginForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    console.log({"username":`${e.target.username.value}`, "password":`${e.target.password.value}`})
+})
+
+function checkLoginStatus () {
+
+}
+
+//Login submit
+
+function handleLoginSubmit(){
+    fetch('http://localhost:3000/users', {
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/JSON',
+                'Accept' : 'application/JSON'
+            },
+            body : JSON.stringify(this)
+        }).then(res=>res.json(res.statusText === 'Created' ? alert('Event successfully added!'):null))
+        .then(data=>postRenderer(data))
+        .catch(function error (){
+            alert("Something went wrong");
+            console.log('error');
+        })
+}
 
 //Post submit
 
