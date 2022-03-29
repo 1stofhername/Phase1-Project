@@ -1,11 +1,12 @@
 let eventCreate = false;
 let resourceCreate = false;
 let Search = false;
-let loggedOut = true;
+let isLoggedIn = false;
 let user=null;
 
 //Listens for 'improve' button click and Toggles post form
 
+console.log(isLoggedIn);
 const postType = document.getElementById('post-type-form');
 postType.addEventListener('change', (e)=>{togglePostForms(e)})
 
@@ -61,25 +62,22 @@ document.addEventListener('DOMContentLoaded', ()=> {
 loginForm = document.getElementById('login');
 loginForm.addEventListener('submit', (e)=>{
     e.preventDefault();
-    console.log({"username":`${e.target.username.value}`, "password":`${e.target.password.value}`})
+    validateLogin({"username":`${e.target.username.value}`, "password":`${e.target.password.value}`})
 })
-
-function checkLoginStatus () {
-
-}
 
 //Login submit
 
-function handleLoginSubmit(){
-    fetch('http://localhost:3000/users', {
-            method : 'POST',
-            headers : {
-                'Content-Type' : 'application/JSON',
-                'Accept' : 'application/JSON'
-            },
-            body : JSON.stringify(this)
-        }).then(res=>res.json(res.statusText === 'Created' ? alert('Event successfully added!'):null))
-        .then(data=>postRenderer(data))
+function validateLogin(login){
+    fetch('http://localhost:3000/users')
+    .then(res=>res.json())
+        .then(users=>users.forEach((user)=>{if(user.username===login.username){
+            if(user.password===login.password){
+                isLoggedIn=true;
+                document.getElementById('login-form').style=("display:none");
+                document.querySelector('#improve-community-btn').removeAttribute('style');
+                console.log(isLoggedIn)
+            } else {alert('Password incorrect')}
+        }else {alert("Account doesn't exist")}}))
         .catch(function error (){
             alert("Something went wrong");
             console.log('error');
