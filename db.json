@@ -3,8 +3,8 @@
     {
       "firstName": "Alicia",
       "lastName": "Parris",
-      "userName": "user1",
-      "password": "password",
+      "userName": "a",
+      "password": "p",
       "profilePhoto": "https://npr.brightspotcdn.com/dims4/default/cc22865/2147483647/strip/true/crop/4000x3522+0+0/resize/880x775!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fwesa%2Ffiles%2F201710%2FAP_17112631939507.jpg",
       "email": "email@email.com",
       "postedEvents": [],
@@ -23,7 +23,7 @@
       "date": "02-02-2022",
       "startTime": "2pm",
       "endTime": "5pm",
-      "participants": 43,
+      "participants": 45,
       "id": 1
     },
     {

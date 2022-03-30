@@ -62,64 +62,74 @@ document.addEventListener('DOMContentLoaded', ()=> {
 //Login form
 
 function renderLogin (user){
-    if(!isLoggedIn){
-    const loginContainer = document.getElementById('login-container');
-    const loginForm = document.createElement('form');
-    const loginTitle = document.createElement('h2');
-    const usernameInput = document.createElement('input');
-    const passInput = document.createElement('input');
-    const userLabel = document.createElement('label');
-    const passLabel = document.createElement('label');
-    const createAcct = document.createElement('p');
-    const loginSub = document.createElement('input')
+    if(isLoggedIn){
+        const {userName, firstName, lastName, profilePhoto} = user;
+    const profileContainer = document.getElementById('profile-container');
+    const h2=document.createElement('h2')
+    const img = document.createElement('img');
 
-    const userAttr={type:"text", name:"username", id:"username", "required":""};
-    const passAttr = {type:"password", name:"password", id:"password", "required":""}
-    const subAttr={type:"submit", name:"sumbit", id:"sumbit", class:"submit-login", value:"Login"};
+    profileContainer.setAttribute('style', 'display:block')
+    profileContainer.appendChild(img);
+    profileContainer.appendChild(h2);
+    h2.id="welcome-title";
+    h2.innerHTML=`Welcome, ${firstName}!`
+
+    img.src=profilePhoto;
+    img.alt='profile-photo'
+    img.setAttribute('id', 'profile-photo');
+
+    document.getElementById('login-container').style=("display:none");
+    document.getElementById('login-title').innerHTML=`Welcome, ${user.firstName}!`
     
-    loginContainer.appendChild(loginTitle);
-    loginContainer.appendChild(loginForm);
-    loginForm.setAttribute('id', 'login')
-    loginForm.appendChild(userLabel);
-    userLabel.setAttribute('for', 'username')
-    loginForm.appendChild(usernameInput);
-    handleSetAttributes(usernameInput, userAttr)
-    loginForm.appendChild(passLabel);
-    passLabel.setAttribute('for', 'password');
-    passLabel.innerHTML="Password"
-    loginForm.appendChild(passInput);
-    handleSetAttributes(passInput, passAttr)
-    loginForm.appendChild(loginSub);
-    handleSetAttributes(loginSub, subAttr);
-    loginForm.appendChild(createAcct);
-    createAcct.innerHTML="Don't have an account? Create one";
-
-    usernameInput.setAttribute('type',"text")
-    loginTitle.innerHTML="Login to start building your community!";
-    loginTitle.setAttribute('id', 'login-title');
-    userLabel.innerHTML="Username";
-
-    function handleSetAttributes(element, attributes) {
-        Object.keys(attributes).forEach(attr=>{
-            element.setAttribute(attr,attributes[attr])
-        })
-    }
-    loginForm.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    loginFormSubmitHandler({"username":`${e.target.username.value}`, "password":`${e.target.password.value}`})
-})} else { 
-    const {userName, firstName, lastName, profilePhoto} = user;
-const loginContainer = document.getElementById('login-container');
-const img = document.createElement('img');
-
-document.getElementById('login').style=("display:none");
-document.getElementById('login-title').innerHTML=`Welcome, ${user.firstName}!`
-
-loginContainer.appendChild(img);
-img.setAttribute=('url', profilePhoto);
 }
+    else { 
+        const loginContainer = document.getElementById('login-container');
+        const loginForm = document.createElement('form');
+        const loginTitle = document.createElement('h2');
+        const usernameInput = document.createElement('input');
+        const passInput = document.createElement('input');
+        const userLabel = document.createElement('label');
+        const passLabel = document.createElement('label');
+        const createAcct = document.createElement('p');
+        const loginSub = document.createElement('input')
+    
+        const userAttr={type:"text", name:"username", id:"username", "required":""};
+        const passAttr = {type:"password", name:"password", id:"password", "required":""}
+        const subAttr={type:"submit", name:"sumbit", id:"sumbit", class:"submit-login", value:"Login"};
+        
+        loginContainer.appendChild(loginTitle);
+        loginContainer.appendChild(loginForm);
+        loginForm.setAttribute('id', 'login-form')
+        loginForm.appendChild(userLabel);
+        userLabel.setAttribute('for', 'username')
+        loginForm.appendChild(usernameInput);
+        handleSetAttributes(usernameInput, userAttr)
+        loginForm.appendChild(passLabel);
+        passLabel.setAttribute('for', 'password');
+        passLabel.innerHTML="Password"
+        loginForm.appendChild(passInput);
+        handleSetAttributes(passInput, passAttr)
+        loginForm.appendChild(loginSub);
+        handleSetAttributes(loginSub, subAttr);
+        loginForm.appendChild(createAcct);
+        createAcct.innerHTML="Don't have an account? Create one";
+    
+        usernameInput.setAttribute('type',"text")
+        loginTitle.innerHTML="Login to start building your community!";
+        loginTitle.setAttribute('id', 'login-title');
+        userLabel.innerHTML="Username";
+    
+        function handleSetAttributes(element, attributes) {
+            Object.keys(attributes).forEach(attr=>{
+                element.setAttribute(attr,attributes[attr])
+            })
+        }
+        loginForm.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        loginFormSubmitHandler({"username":`${e.target.username.value}`, "password":`${e.target.password.value}`})
+    })
+    }    
 }
-
 
 
 
@@ -143,21 +153,6 @@ function loginFormSubmitHandler(login){
             alert("Something went wrong");
             console.log(error);
         })
-}
-
-function renderLogInDiv (user) {
-    const {userName, firstName, lastName, profilePhoto} = user
-    const loginContainer = document.getElementById('login-container');
-    const img = document.createElement('img');
-
-    document.getElementById('login').style=("display:none");
-    document.getElementById('login-title').innerHTML=`Welcome, ${user.firstName}!`
-
-    loginContainer.appendChild(img);
-    img.setAttribute=('url', profilePhoto);
-
-    
-
 }
 
 
