@@ -65,14 +65,14 @@ function renderLogin (user){
     if(isLoggedIn){
         const {userName, firstName, lastName, profilePhoto} = user;
     const profileContainer = document.getElementById('profile-container');
-    const h2=document.createElement('h2')
+    const h3=document.createElement('h3')
     const img = document.createElement('img');
 
     profileContainer.setAttribute('style', 'display:block')
     profileContainer.appendChild(img);
-    profileContainer.appendChild(h2);
-    h2.id="welcome-title";
-    h2.innerHTML=`Welcome, ${firstName}!`
+    profileContainer.appendChild(h3);
+    h3.id="welcome-title";
+    h3.innerHTML=`Welcome, ${firstName}!`
 
     img.src=profilePhoto;
     img.alt='profile-photo'
