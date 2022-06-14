@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
     postFormSubmitHandler();
     fetchPost();
     renderLogin();
-    
    
 });
 
@@ -64,22 +63,28 @@ document.addEventListener('DOMContentLoaded', ()=> {
 function renderLogin (user){
     if(isLoggedIn){
         const {userName, firstName, lastName, profilePhoto} = user;
-    const profileContainer = document.getElementById('profile-container');
-    const h3=document.createElement('h3')
-    const img = document.createElement('img');
+        const profileContainer = document.getElementById('profile-container');
+        const welcome=document.createElement('h3');
+        const logout=document.createElement('h3');
+        const img = document.createElement('img');
 
-    profileContainer.setAttribute('style', 'display:block')
-    profileContainer.appendChild(img);
-    profileContainer.appendChild(h3);
-    h3.id="welcome-title";
-    h3.innerHTML=`Welcome, ${firstName}!`
+        profileContainer.setAttribute('style', 'display:block');
+        profileContainer.appendChild(img);
+        profileContainer.appendChild(welcome);
+        profileContainer.appendChild(logout);
+        welcome.id="profile-title";
+        logout.id="logout";
+        welcome.innerHTML=`Welcome, ${firstName}!`
+        logout.innerHTML="Logout"
 
-    img.src=profilePhoto;
-    img.alt='profile-photo'
-    img.setAttribute('id', 'profile-photo');
 
-    document.getElementById('login-container').style=("display:none");
-    document.getElementById('login-title').innerHTML=`Welcome, ${user.firstName}!`
+        img.src=profilePhoto;
+        img.alt='profile-photo'
+        img.setAttribute('id', 'profile-photo');
+
+        document.getElementById('login-container').style=("display:none");
+        document.getElementById('login-title').innerHTML=`Welcome, ${user.firstName}!`
+        
     
 }
     else { 
@@ -131,8 +136,6 @@ function renderLogin (user){
     }    
 }
 
-
-
 //Login submit
 
 function loginFormSubmitHandler(login){
@@ -164,7 +167,7 @@ const postFormSubmitHandler = ()=>{
     const form = document.getElementById('event-form');
     form.addEventListener('submit', (e)=>{
         const improveBtn = document.querySelector('#improve-community-btn');
-        const eventFormContainer = document.querySelector('div.container#event');
+        const eventFormContainer = document.getElementById('event-form-containerß');
         let title = e.target['event-title'].value;
         let facilitator = e.target['facilitator'].value;
         let image = e.target['image'].value;
@@ -179,7 +182,7 @@ const postFormSubmitHandler = ()=>{
 
         //Hide event form after submit
 
-        eventFormContainer.style.display = 'none';
+        // eventFormContainer.style.display="none";
         improveBtn.innerHTML = 'Engage your community!';
 
        

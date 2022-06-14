@@ -129,13 +129,23 @@ button:hover {
 
 #profile-container {
   position:relative;
+  display:block;
 }
 
-#welcome-title{
+#profile-title{
   margin:0;
   margin:1rem;
   position: absolute;
   top: 30%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#logout{
+  margin:0;
+  margin:1rem;
+  float:right;
+  top: 40%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }

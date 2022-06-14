@@ -6,14 +6,16 @@
 
 ## Setup
 
-1.If JSON-server is not already installed, run <code>npm install -g json-server</code> in terminal to install JSON-server
+1. If JSON-server is not already installed, run <code>npm install -g json-server</code> in terminal to install JSON-server
 
 
 2. Initialize the json server by opening terminal and navigating to the folder containing the project files. 
 
 3. While inside the project folder, type <code>json-server --watch db.json</code>
 
-4. To start the program, launch the index.html file in the web browser of your choice.
+4. To start the program, launch the <code>index.html</code> file in the web browser of your choice.
+
+5. Use the <code>demo credentials</code> <em>username:a password:p</em>.
 
 
 ## Usage
@@ -53,13 +55,15 @@
 
 <li>Notification of successful event post </li>
 
+<li> Authentication</li>
+
+<li>Community member registration</li>
+
 ### Stretch goals
 
 <li>Error message for unsuccessful posts</li>
 
-<li> Login page</li>
-
-<li>Community member registration</li>
+<li>Create account form</li>
 
 <li>Community members will be able to choose community location, enter skills/resources they would like to offer community and track event posts they are interested in</li>
 
